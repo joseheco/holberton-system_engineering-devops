@@ -1,0 +1,1 @@
+Parte shell punto 0
