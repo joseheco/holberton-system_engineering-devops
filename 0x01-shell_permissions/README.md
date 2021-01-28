@@ -1,0 +1,1 @@
+Se realizara nueva tarea de los comandos en los siguientes puntos se explicara.
