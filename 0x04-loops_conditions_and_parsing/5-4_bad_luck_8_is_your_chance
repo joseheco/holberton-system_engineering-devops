@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Bash script loops 1 to 10 
-# Display bad lucj for 4 loop
+# Bash script loops 1 to 10
+# Display bad luck for 4 loop
 # Display good luck for 8 loop
 # Display Holberton school for other
 
