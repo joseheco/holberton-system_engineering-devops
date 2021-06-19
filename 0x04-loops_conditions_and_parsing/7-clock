@@ -11,7 +11,8 @@ while [ $minutes -le 59 ];
 do
 echo "$minutes"
 ((minutes++))
-if [ $minutes -eq 59 ]
+if [ $minutes -eq 59 ];
 then
 (($hours++))
+fi
 done
