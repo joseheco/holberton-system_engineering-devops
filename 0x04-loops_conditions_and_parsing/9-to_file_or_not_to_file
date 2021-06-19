@@ -2,17 +2,16 @@
 # Script display holbertonschool file
 
 i="holbertonschool"
-
-if [ -e $i ];
+if [ -e $i ]
 then
 echo "holbertonschool file exits"
-if [ -s $i ];
+if [ -s $i ]
 then
 echo "holbertonschool file is not empty"
 else
 echo "holbertonschool file is empty"
 fi
-if [ -f $i ];
+if [ -f $i ]
 then
 echo "holbertonschool is a regular file"
 fi
