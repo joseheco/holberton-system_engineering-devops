@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 # Script display holbertonschool file
 
-file ="holbertonschool"
+i="holbertonschool"
 
-if [ -e $file ];
+if [ -e $i ];
 then
 echo "holbertonschool file exits"
-if [ -s $file ];
+if [ -s $i ];
 then
 echo "holbertonschool file is not empty"
 else
 echo "holbertonschool file is empty"
 fi
-if [ -f $file ];
+if [ -f $i ];
 then
 echo "holbertonschool is a regular file"
 fi
