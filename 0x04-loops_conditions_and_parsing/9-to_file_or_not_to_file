@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
-# Script display holbertonschool file
+# Bash script wil display information of holbertonschool file
 
-if [ -e "holbertonschool" ]
+i="holbertonschool"
+
+if [ -e $i ];
 then
-echo "holbertonschool file exits"
-if [ -s "holbertonschool" ]
+echo "holbertonschool file exists"
+if [ -s $i ];
 then
 echo "holbertonschool file is not empty"
 else
 echo "holbertonschool file is empty"
 fi
-if [ -f "holbertonschool" ]
+if [ -f $i ];
 then
 echo "holbertonschool is a regular file"
 fi
