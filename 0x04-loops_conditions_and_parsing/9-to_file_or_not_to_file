@@ -18,4 +18,4 @@ echo "holbertonschool is a regular file"
 fi
 else
 echo "holbertonschool file does not exist"
-done
+fi
