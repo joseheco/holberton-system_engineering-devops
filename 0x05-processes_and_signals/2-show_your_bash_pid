@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Bash script displays lines
+ps axuf | grep "bash"
