@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Bash script displays PID w/p name.
+pgrep -fl bash
