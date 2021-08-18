@@ -1,4 +1,5 @@
-# client SSH configuration file that we can connect to the server without a pass.
+# Client SSH configuration file that we can connect to the server without a pass.
+
 file { 'Configuration File':
     ensure => 'present',
     name   => 'ssh_config',
