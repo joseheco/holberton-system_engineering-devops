@@ -20,6 +20,8 @@
     #   ForwardAgent no
     #   ForwardX11 no
     #   ForwardX11Trusted yes
+    #   RhostsRSAAuthentication no
+    #   RSAAuthentication yes
     #   PasswordAuthentication yes
         PasswordAuthentication no
     #   HostbasedAuthentication no
@@ -32,9 +34,10 @@
     #   AddressFamily any
     #   ConnectTimeout 0
     #   StrictHostKeyChecking ask
+    #   IdentityFile ~/.ssh/identity
     #   IdentityFile ~/.ssh/id_rsa
     #   IdentityFile ~/.ssh/id_dsa
-        IdentityFile ~./ssh/holberton
+        IdentityFile ~/.ssh/holberton
     #   Port 22
     #   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
     #   MACs hmac-md5,hmac-sha1,umac-64@openssh.com
