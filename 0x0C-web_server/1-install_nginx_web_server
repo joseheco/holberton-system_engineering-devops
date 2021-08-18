@@ -2,5 +2,6 @@
 # Script that install nginx and start that services.
 sudo apt-get update
 sudo apt-get -y install nginx
+ufw allow 'Nginx HTTP'
 service nginx start
-echo "Holberton School" > /var/www/html/index.html
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
