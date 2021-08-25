@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 # Install load balance
-
-sudo apt-get update
-sudo apt-get install -y haproxy=1.6\*
-
-cat > /etc/haproxy/haproxy.cfg << "EOF"
+sudo apt update
+sudo apt install -y haproxy=1.8.\*
+sudo tee -a /etc/haproxy/haproxy.cfg <<EOF
 global
         log /dev/log    local0
         log /dev/log    local1 notice
