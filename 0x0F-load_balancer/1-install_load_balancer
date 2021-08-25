@@ -57,4 +57,4 @@ backend nodes
         server web02 54.86.211.56:80 check
 EOF
 
-service haproxy restart
+service haproxy start
