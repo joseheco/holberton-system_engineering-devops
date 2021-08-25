@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Install load balance
-sudo apt update
+sudo apt-get -y update
 sudo apt install -y haproxy=1.8.\*
 sudo tee -a /etc/haproxy/haproxy.cfg <<EOF
 global
@@ -53,4 +53,4 @@ backend web-backend
         server web-02 54.86.211.56:80 check
 EOF
 
-service haproxy restart
+service haproxy start
