@@ -41,20 +41,16 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend localnodes
+frontend http_front
         bind *:80
         mode http
-        default_backend nodes
+        default_backend web-backend
 
-backend nodes
+backend web-backend
         mode http
         balance roundrobin
-        option forwardfor
-        http-request set-header X-Forwarded-Port %[dst_port]
-        http-request add-header X-Forwarded-Proto https if { ssl_fc }
-        option httpchk HEAD / HTTP/1.1\r\nHost:localhost
         server web-01 34.138.9.75:80 check
         server web-02 54.86.211.56:80 check
 EOF
 
-service haproxy start
+service haproxy restart
