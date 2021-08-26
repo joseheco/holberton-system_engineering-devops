@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Script let use por 80 and stop the process.
 sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-pkill -HUB nginx
+pkill -1 nginx
