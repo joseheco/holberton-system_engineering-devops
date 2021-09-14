@@ -13,7 +13,7 @@ if __name__ == "__main__":
         argv[1])
     todos = requests.get(url_todos).json()
     value = [{'task': todo.get('title'), 'completed':
-             todo.get('completed'), 'username': employee} for todo in todos]
+              todo.get('completed'), 'username': employee} for todo in todos]
     datos = {argv[1]: value}
 
     with open('{}.json'.format(argv[1]), 'w') as f:
