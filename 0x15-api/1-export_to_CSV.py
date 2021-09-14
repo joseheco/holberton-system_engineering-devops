@@ -13,7 +13,7 @@ if __name__ == "__main__":
         argv[1])
     todos = requests.get(url_todos).json()
     datos = [[argv[1], employee, todo.get('completed'), todo.get('title')]
-            for todo in todos]
+             for todo in todos]
 
     with open('{}.csv'.format(argv[1]), 'w') as f:
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
