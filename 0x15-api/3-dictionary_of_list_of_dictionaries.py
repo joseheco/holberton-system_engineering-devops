@@ -4,15 +4,17 @@
 if __name__ == "__main__":
     import requests
     from sys import argv
+    import json
 
     url = 'https://jsonplaceholder.typicode.com/users/{}'.format(argv[1])
-    employee = requests.get(url).json().get('name')
+    employee = requests.get(url).json().get('username')
 
     url_todos = 'https://jsonplaceholder.typicode.com/todos?userId={}'.format(
         argv[1])
     todos = requests.get(url_todos).json()
-    done = [todo for todo in todos if todo.get('completed')]
-    print("Employee {} is done with tasks({}/{}):".format(
-        employee, len(done), len(todos)))
-    for a in done:
-        print("\t ", a.get('title'))
+    value = [{'task': todo.get('title'), 'completed': todo.get('completed'),
+              'username': employee} for todo in todos]
+    datos = {argv[1]: value}
+
+    with open('{}.json'.format(argv[1]), 'w') as f:
+        json.dump(datos, f)
