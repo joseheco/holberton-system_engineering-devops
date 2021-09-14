@@ -3,7 +3,7 @@
 
 if __name__ == "__main__":
     import requests
-    import sys
+    from sys import argv
 
     url = 'https://jsonplaceholder.typicode.com/users/{}'.format(argv[1])
     employee = requests.get(url).json().get('name')
