@@ -4,7 +4,7 @@
 if __name__ == "__main__":
     import requests
     from sys import argv
-    import requests
+    import csv
 
     url = 'https://jsonplaceholder.typicode.com/users/{}'.format(argv[1])
     employee = requests.get(url).json().get('username')
