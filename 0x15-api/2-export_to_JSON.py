@@ -7,7 +7,7 @@ if __name__ == "__main__":
     import json
 
     url = 'https://jsonplaceholder.typicode.com/users/{}'.format(argv[1])
-    employee = requests.get(url).json().get('name')
+    employee = requests.get(url).json().get('username')
 
     url_todos = 'https://jsonplaceholder.typicode.com/todos?userId={}'.format(
         argv[1])
