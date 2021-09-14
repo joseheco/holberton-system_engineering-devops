@@ -12,7 +12,7 @@ if __name__ == "__main__":
     url_todos = 'https://jsonplaceholder.typicode.com/todos?userId={}'.format(
         argv[1])
     todos = requests.get(url_todos).json()
-    value = [{'task': todo.get('title'), 'completed': todo.get('completed'), 
+    value = [{'task': todo.get('title'), 'completed': todo.get('completed'),
               'username': employee} for todo in todos]
     datos = {argv[1]: value}
 
