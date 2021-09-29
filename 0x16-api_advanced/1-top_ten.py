@@ -14,7 +14,6 @@ def top_ten(subreddit):
                             .format(subreddit), allow_redirects=False,
                             headers={'User-Agent': 'Custom'}).json().get(
                                 'data').get('children')
-    
         for child in info:
             print(child.get('data').get('title'))
     except:
