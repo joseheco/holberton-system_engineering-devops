@@ -9,13 +9,13 @@ import requests
 
 def top_ten(subreddit):
     """Return the top 10 hot posts"""
-    info = requests.get('https://www.reddit.com/r/{}/hot.json?limit=10'
-                        .format(subreddit), allow_redirects=False,
-                        headers={'User-Agent': 'Custom'}).json().get(
-                            'data').get('children')
-
-    if info.status_code >= 300:
-        print('None')
-    else:
+    try:
+        info = requests.get('https://www.reddit.com/r/{}/hot.json?limit=10'
+                            .format(subreddit), allow_redirects=False,
+                            headers={'User-Agent': 'Custom'}).json().get(
+                                'data').get('children')
+    
         for child in info:
             print(child.get('data').get('title'))
+    except:
+        print('None')
