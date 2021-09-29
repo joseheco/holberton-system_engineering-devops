@@ -10,10 +10,12 @@ import requests
 def top_ten(subreddit):
     """Return the top 10 hot posts"""
     info = requests.get('https://www.reddit.com/r/{}/hot.json?limit=10'
-                        .format(subreddit), headers={'User-Agent': 'Custom'},
-                        allow_redirects=False)
+                        .format(subreddit), allow_redirects=False,
+                        headers={'User-Agent': 'Custom'}).json().get(
+                            'data').get('children')
 
-    if info.status_code == 200:
-        [print(child.get('data').get('title'))
-            for child in info.json().get('data').get('children')]
-    print('None')
+    if info.status_code == 300:
+        print('None')
+    else:
+        for child in info:
+            print(child.get('data').get('title'))
