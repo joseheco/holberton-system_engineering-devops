@@ -14,7 +14,7 @@ def top_ten(subreddit):
                         headers={'User-Agent': 'Custom'}).json().get(
                             'data').get('children')
 
-    if info.status_code == 300:
+    if info.status_code >= 300:
         print('None')
     else:
         for child in info:
